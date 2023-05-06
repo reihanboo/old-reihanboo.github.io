@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreihan=self.webpackChunkreihan||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"sushi killer","permalink":"/blog/sushi killer"}]}')}}]);

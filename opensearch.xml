@@ -4,8 +4,8 @@
   <ShortName>Reihan</ShortName>
   <Description>Search Reihan</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://reihanboo.github.io/reihanboo.github.io/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://reihanboo.github.io/reihanboo.github.io/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://reihanboo.github.io/reihanboo.github.io/opensearch.xml" />
-  <moz:SearchForm>https://reihanboo.github.io/reihanboo.github.io/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://reihanboo.github.io/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://reihanboo.github.io/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://reihanboo.github.io/opensearch.xml" />
+  <moz:SearchForm>https://reihanboo.github.io/</moz:SearchForm>
 </OpenSearchDescription>
