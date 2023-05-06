@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreihan=self.webpackChunkreihan||[]).push([[728],{2993:e=>{e.exports=JSON.parse('{"permalink":"/reihanboo.github.io/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
