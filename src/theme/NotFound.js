@@ -1,14 +1,32 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-import React from 'react';
-import Layout from '@theme/Layout';
-import Translate, {translate} from '@docusaurus/Translate';
-import {PageMetadata} from '@docusaurus/theme-common';
+import React, { useEffect, useState } from "react";
+import Layout from "@theme/Layout";
+import Translate, { translate } from "@docusaurus/Translate";
+import { useHistory } from "react-router-dom";
+import { PageMetadata } from "@docusaurus/theme-common";
+
 export default function NotFound() {
+  const history = useHistory();
+  const [countdownWidth, setCountdownWidth] = useState("100%");
+
+  useEffect(() => {
+    const start = Date.now();
+    const timeout = setTimeout(() => {
+      history.goBack();
+    }, 5000);
+
+    const interval = setInterval(() => {
+      const elapsedTime = Date.now() - start;
+      const remainingTime = Math.max(0, 5000 - elapsedTime);
+      const newWidth = `${(remainingTime / 5000) * 100}%`;
+      setCountdownWidth(newWidth);
+    }, 10);
+
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
+  }, [history]);
+
   return (
     <>
       <PageMetadata
@@ -30,8 +48,27 @@ export default function NotFound() {
                 </Translate>
               </h1>
               <p>
-                <a href="/">Back to Home</a>
+                <a href="/" onClick={() => history.goBack()}>
+                  Back to Home
+                </a>
               </p>
+              <div
+                style={{
+                  height: "5px",
+                  backgroundColor: "#ddd",
+                  marginTop: "10px",
+                  width: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    backgroundColor: "#007bff",
+                    width: countdownWidth,
+                    transition: "width 0.01s linear",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </main>
