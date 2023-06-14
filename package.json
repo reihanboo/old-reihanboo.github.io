@@ -40,5 +40,20 @@
   },
   "devDependencies": {
     "jest": "^29.5.0"
-  }
+  },
+  "description": "My personal notebook",
+  "main": "babel.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reihanboo/reihanboo.github.io.git"
+  },
+  "author": "Reihan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reihanboo/reihanboo.github.io/issues"
+  },
+  "homepage": "https://github.com/reihanboo/reihanboo.github.io#readme"
 }
