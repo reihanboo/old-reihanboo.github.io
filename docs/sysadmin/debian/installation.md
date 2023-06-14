@@ -1,23 +1,28 @@
-# VirtualBox Installation
+---
+title: Installation Using VirtualBox
+---
+
 VMWare kinda sucks for normal installations like this one... Just give me a virtual machine I can run in a click!
 
 ## Virtual Machine Setup
+
 1. Download the Debian 11 ISO file from the official Debian website.
    - https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.7.0-amd64-netinst.iso
 2. Open VirtualBox and create a new virtual machine.
 3. Click "New".
 4. The virtual machine setup rules are as follows:
-    - Name: Debian 11
-    - ISO Image: Linux Debian 11
+   - Name: Debian 11
+   - ISO Image: Linux Debian 11
 5. Check "Skip Unattended Installation".
 6. Click "Next".
 7. Set the virtual machine settings as follows:
-    - Memory: 2 GB
-    - Processors: 2 CPUS
-    - Hard disk: 20 GB
+   - Memory: 2 GB
+   - Processors: 2 CPUS
+   - Hard disk: 20 GB
 8. Click "Finish".
 
 ## Network Setup on the Virtual Machines
+
 1. Click "Settings" at the top right of the virtual machine.
 2. On the left side menu, click "Network".
 3. Then, click the "Adapter 2" tab.
@@ -26,8 +31,11 @@ VMWare kinda sucks for normal installations like this one... Just give me a virt
 6. Then click OK.
 
 ## Virtual Machine's Settings in VirtualBox
+
 After the above settings, select "Debian 11", then click "Start".
+
 ### Initial Installation
+
 1. Start the virtual machine and select "Install" from the installation menu.
 2. Select English as the language.
 3. You can choose your country. But for Indonesia, choose "Other" as the location, then select "Asia" and "Indonesia".
@@ -55,10 +63,14 @@ After the above settings, select "Debian 11", then click "Start".
 25. Install the GRUB boot loader.
 26. Select "/dev/sda" as the boot loader device.
 27. Click "Continue" in the installation complete menu.
-That's it.
+    That's it.
 
-### Connection to the Internet
+## Connection to the Internet
+
+### Manual Way
+
 #### IP Configuration
+
 1. Type `vi /etc/network/interfaces`.
 2. Then enable the line number by using `:set nu`.
 3. On line 11, change to `auto enp0s3`.
@@ -70,27 +82,42 @@ That's it.
 9. Type `systemctl restart networking`.
 
 #### DNS Configuration
+
 1. Type `vi /etc/resolv.conf`.
 2. Create a new first line, then type `nameserver 8.8.8.8`.
 3. On the 2nd line, type `nameserver 8.8.4.4`.
 4. Then save.
 
 #### Changing Repository
+
 1. Type `vi /etc/apt/sources.list`.
 2. Delete all contents of the file using `:%d`.
 3. In `sources.list`, type as below:
-```bash title="sources.list" 
-deb http://deb.debian.org/debian bullseye main  
+
+```bash title="sources.list"
+deb http://deb.debian.org/debian bullseye main
 deb-src http://deb.debian.org/debian bullseye main
 
-deb http://deb.debian.org/debian-security/ bullseye-security main  
+deb http://deb.debian.org/debian-security/ bullseye-security main
 deb-src http://deb.debian.org/debian-security/ bullseye-security main
 
-deb http://deb.debian.org/debian bullseye-updates main  
+deb http://deb.debian.org/debian bullseye-updates main
 deb-src http://deb.debian.org/debian bullseye-updates main
 ```
+
 4. Then save.
+
 If typing as much as above is annoying, you can use SSH or use the commands below:
-1. Type `wget -O /etc/apt/sources.list https://rentry.co/sourcesdotlist/raw`.
+
+1. Type `wget -O /etc/apt/sources.list https://reihan.pages.dev/scripts/sources.list`.
 2. That's it.
-That's just *the tip of the iceberg* of the magic of *scripting*. You can find out more in depth with a simple Googling.
+
+### Automatic Way
+
+You might be asking me, why did I put the automatic (AKA the easy way) below the manual way? Well, call me a traditionalist, because I would rather learn the manual way to do something and only I understood it well enough that I automate it.
+
+For those who is a beginner at this, don't give in to the temptation of scripting just yet!
+
+:::info
+Please go to [this page](/docs/sysadmin/scripts/network_installation) for the network scripts.
+:::

@@ -1,0 +1,17 @@
+# visit https://reihan.pages.dev/ :)
+
+source /etc/network/interfaces.d/*
+
+# loopback interface
+auto lo
+iface lo inet loopback
+
+# primary interface
+allow-hotplug enp0s3
+iface enp0s3 inet dhcp
+
+# to-host interface
+auto enp0s8
+iface enp0s8 inet static
+	address 192.168.56.11
+	netmask 255.255.255.0

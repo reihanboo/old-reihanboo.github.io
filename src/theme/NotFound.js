@@ -49,7 +49,7 @@ export default function NotFound() {
               </h1>
               <p>
                 <a href="/" onClick={() => history.goBack()}>
-                  Back to Home
+                  Back to Previous Page
                 </a>
               </p>
               <div

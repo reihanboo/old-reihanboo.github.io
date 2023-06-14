@@ -1,5 +1,5 @@
 ---
-title: AAPanel
+title: AAPanel Installation
 ---
 
 :::info
@@ -7,6 +7,7 @@ If you don't have a Debian virtual machine yet, you can visit [this page](../deb
 :::
 
 ## Installation
+
 1. After performing the steps above, we can now type `apt update -y`.
 2. Type `apt install wget -y`.
 3. Type `wget -O install_aapanel.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh`.
@@ -16,11 +17,13 @@ If you don't have a Debian virtual machine yet, you can visit [this page](../deb
 7. Once the aaPanel script installation is complete, access the control panel using `https://192.168.56.11:7800` or the IP on your `enp0s8`.
 
 ## Accessing aaPanel
+
 1. Type `https://192.168.56.11:7800/<id>` into the browser on the host.
 2. From the screenshot, you can type the username and password.
 3. If there is a pop-up/modal, close it with the button on the top right.
 
 ## LEMP (Linux, Nginx, MySQL, PHP) Software Installation
+
 1. In the virtual machine, type the following:
    ```bash
    curl -v https://brandnew.aapanel.com
@@ -37,6 +40,7 @@ If you don't have a Debian virtual machine yet, you can visit [this page](../deb
 10. Close the pop-op/modal with the button on the top right.
 
 ## Publishing a Website
+
 1. On the aaPanel page, on the left sidebar, click the "Website" menu.
 2. Click "Add site".
 3. In "Domain name", type the IP of the Debian virtual machine, in my case, it is `192.168.56.11`.
