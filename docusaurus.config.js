@@ -1,9 +1,12 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const offlineSearch = require.resolve("@cmfcmf/docusaurus-search-local");
+
+const math = require("remark-math");
+const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,8 +17,8 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/pokemon.gif",
-  organizationName: "reihanboo", // Usually your GitHub org/user name.
-  projectName: "reihanboo.github.io", // Usually your repo name.
+  organizationName: "reihanboo",
+  projectName: "reihanboo.github.io",
   deploymentBranch: "main",
   plugins: ["@docusaurus/theme-live-codeblock", offlineSearch],
   i18n: {
@@ -35,15 +38,15 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl:
             "https://github.com/reihanboo/reihanboo.github.io/blob/main/",
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: {
           showReadingTime: true,
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
             defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
-          // Please change this to your repo.
           editUrl:
             "https://github.com/reihanboo/reihanboo.github.io/blob/main/",
         },
@@ -53,7 +56,15 @@ const config = {
       }),
     ],
   ],
-
+  stylesheets: [
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
+    },
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

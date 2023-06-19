@@ -6,7 +6,13 @@ I'm not much of a movie connoisseur, but these movies are definitely good.
 
 A lot of potential for development here. Might make one that automatically connects to Obsidan? Nah, I don't know much about Obsidian's plugin development.
 
+## To watch soon
+
+- [ ] Once Upon a Time... in Hollywood
+- [ ] Fight Club
+
 ## Mystery
+
 - [ ] Fight Club
 - [ ] The Game
 - [ ] The Prestige
@@ -47,6 +53,7 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] Chinatown
 
 ## Action/Thriller/Crime
+
 - [ ] The Godfather I/II/III
 - [ ] City Of God
 - [ ] Speed
@@ -91,6 +98,7 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] James Bond (Daniel Craig)
 
 ## War
+
 - [ ] Dunkirk
 - [ ] The Imitation Game
 - [ ] 1917
@@ -100,6 +108,7 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] JoJo Rabbit
 
 ## Romance/Romcom
+
 - [ ] Titanic
 - [ ] 10 Things I Hate About You
 - [ ] 500 Days Of Summer
@@ -125,6 +134,7 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] The Wedding Ringer
 
 ## Drama
+
 - [ ] Gladiator
 - [ ] The Shawshank Redemption
 - [ ] Schindler’s List
@@ -184,6 +194,7 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] The Aeronauts
 
 ## Sports
+
 - [ ] Ford v Ferrari
 - [ ] Warrior
 - [ ] Ip Man
@@ -212,6 +223,7 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] More Than A Game
 
 ## Sci-fi/Fantasy
+
 - [ ] Inception
 - [ ] Interstellar
 - [ ] Lord Of The Rings
@@ -240,8 +252,9 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] Children Of Men
 
 ## Superhero
+
 - [ ] Batman Begins
-- [ ] The Dark Knight 
+- [ ] The Dark Knight
 - [ ] The Dark Knight Rises
 - [ ] Man Of Steel
 - [ ] Logan
@@ -249,6 +262,7 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] MCU
 
 ## Animated
+
 - [ ] CoCo
 - [x] Your Name.
 - [ ] The Lion King
@@ -258,10 +272,11 @@ A lot of potential for development here. Might make one that automatically conne
 - [ ] Incredibles
 - [x] Toy Story
 - [x] Cars
-- [ ] My Neighbor Totoro 
+- [ ] My Neighbor Totoro
 - [ ] Howl’s Moving Castle
 
 ## Christmas
+
 - [ ] Klaus
 - [ ] The Christmas Chronicles
 - [ ] The Elf
